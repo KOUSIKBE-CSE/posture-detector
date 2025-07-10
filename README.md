@@ -34,7 +34,7 @@ A web application that detects **bad posture** during **squats** or **desk sitti
 
 ## 🎥 Demo Video
 
-▶️ **Watch the demo:** [https://drive.google.com/file/d/your-demo-video-link/view](https://drive.google.com/file/d/your-demo-video-link/view)
+▶️ **Watch the demo:** https://www.loom.com/share/10cc11cbcc8e42e58dce91290852be35?sid=8ec560df-17fc-496e-8c66-7116e728b9b9
 
 This video demonstrates:
 - Uploading and analyzing a squat/desk video
