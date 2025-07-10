@@ -1,56 +1,62 @@
 # 🧍‍♂️ Full-Stack Rule-Based Bad Posture Detection App
 
-This project is a full-stack web application that detects bad posture from a user-uploaded video or webcam input. It uses MediaPipe and OpenCV to extract body keypoints and applies rule-based logic to identify poor postural positions (e.g., slouching, knees over toes, hunched back, etc.).
+A web application that detects **bad posture** during **squats** or **desk sitting** using **rule-based logic** and **pose estimation** with MediaPipe. Users can upload a video or use their webcam to receive real-time posture feedback.
 
 ---
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack Used
 
-### Frontend:
-- **React.js**
-- **Axios** (for API requests)
-- **react-webcam** (for capturing webcam frames)
+### 👨‍💻 Frontend
+- React.js (Vite)
+- Tailwind CSS (UI Styling)
+- Axios (API communication)
+- React Webcam (for webcam capture)
 
-### Backend:
-- **FastAPI**
-- **MediaPipe** (pose estimation)
-- **OpenCV**
-- **NumPy**
-- **Uvicorn** (ASGI server)
+### 🔧 Backend
+- FastAPI (Python)
+- OpenCV (video processing)
+- MediaPipe (pose landmark detection)
+- Uvicorn (server)
 
----
-
-## 🚀 Features
-
-- Upload video or use webcam to record posture
-- Detect bad posture using three rules:
-  - **Back angle < 150°**
-  - **Knee goes beyond toe**
-  - **Neck bend > 30°**
-- Real-time or frame-by-frame feedback
-- Annotated output video with posture markings
-- Downloadable video with alerts
-- Deployed frontend and backend
+### ☁️ Deployment
+- **Frontend**: Netlify  
+- **Backend**: Render  
+- **Video Hosting**: FastAPI static route (`/video/{filename}`)
 
 ---
 
-## 📸 Demo
+## 🚀 Live Demo Links
 
-▶️ **Demo Video**: [Watch here](https://drive.google.com/file/d/your_demo_video_link_here/view)
-
----
-
-## 🌐 Live Links
-
-- 🔗 **Frontend (React)**: [https://your-frontend-url.netlify.app](https://your-frontend-url.netlify.app)
-- 🔗 **Backend (FastAPI)**: [https://your-backend-url.onrender.com](https://your-backend-url.onrender.com)
+- 🔗 **Frontend URL**: [https://your-netlify-site.netlify.app](https://your-netlify-site.netlify.app)
+- 🔗 **Backend URL**: [https://your-backend.onrender.com](https://your-backend.onrender.com)
 
 ---
 
-## 🧪 How to Run Locally
+## 🎥 Demo Video
 
-### 1. Clone the Repository
+▶️ **Watch the demo:** [https://drive.google.com/file/d/your-demo-video-link/view](https://drive.google.com/file/d/your-demo-video-link/view)
+
+This video demonstrates:
+- Uploading and analyzing a squat/desk video
+- Real-time posture issue detection
+- Annotated feedback display
+- Code and logic explanation
+
+---
+
+## 🧑‍💻 How to Run Locally
+
+### 📦 Prerequisites
+- Node.js & npm
+- Python 3.9+
+- FFmpeg (for video encoding)
+- pip / virtualenv
+
+### 🔹 Backend Setup
 
 ```bash
-git clone https://github.com/your-username/posture-detector.git
-cd posture-detector
+cd backend
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
