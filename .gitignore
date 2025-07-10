@@ -1,0 +1,7 @@
+*.mp4
+*.mp4
+*.mp4
+*.mp4
+venv/
+__pycache__/
+node_modules/
